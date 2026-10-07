@@ -1,15 +1,52 @@
 # Superstore Analytics Dashboard
 
-## Overview
-An interactive Power BI reporting solution designed to track, analyze, and visualize retail sales performance, profitability, and customer behavior across multiple regions and product categories.
+[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](#)
+[![DAX](https://img.shields.io/badge/DAX-Data_Analysis_Expressions-yellowgreen?style=for-the-badge)](#)
+[![Power Query](https://img.shields.io/badge/Power_Query-ETL-orange?style=for-the-badge)](#)
+[![SQL](https://img.shields.io/badge/SQL-Data_Validation-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](#)
+[![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)](#)
 
-## Key Features
-- **Executive KPI Tracking:** Real-time visibility into total revenue, profit margins, order counts, and discount impacts.
-- **Geographical & Regional Breakdown:** Interactive maps and drill-downs analyzing regional sales trends and market performance.
-- **Product & Category Analysis:** Deep dive into top-performing products, underperforming inventory, and category-level returns.
-- **Dynamic Slicing & Filtering:** Custom navigation allowing multi-dimensional analysis by time, segment, and geography.
-- **Data Modeling & DAX:** Optimized star-schema data model utilizing calculated DAX measures for growth metrics and time intelligence.
+An executive-level business intelligence dashboard built in **Power BI** to evaluate multi-year retail performance, year-over-year (YoY) revenue trajectories, sub-category profitability, and regional distribution across global operations.
 
-## Tools Used
-- **Power BI Desktop** (Data Modeling, DAX, Visual Design)
-- **Power Query** (ETL & Data Transformation)
+---
+
+## Dashboard Preview
+
+![Superstore Analytics Dashboard](dashboard_preview.png)
+
+---
+
+## Business Problem & Objectives
+
+Retail enterprises managing high-volume global transactions face distinct operational challenges:
+* **Growth vs. Margin Disconnect:** High-volume sales categories often operate at razor-thin or negative profit margins due to steep discounting.
+* **Return Rate Drag:** Unmonitored order returns degrade operational margins and inflate logistics overhead.
+* **Segment Allocation:** Leadership requires immediate clarity on how customer segments (Consumer, Corporate, Home Office) contribute to bottom-line profitability.
+
+This dashboard delivers continuous visibility into core retail metrics, enabling stakeholders to benchmark performance against prior-year baselines and isolate growth opportunities.
+
+---
+
+## Executive KPIs & Key Findings
+
+* **Overall Revenue & Profit Surge:**
+  * Total Sales achieved **$9.48M** (+51.30% vs. PY $6.26M).
+  * Total Profit reached **$1.09M** (+51.34% vs. PY $720.18K).
+* **Return Rate Optimization:**
+  * Maintained a low return rate of **4.68%**, improving by **-0.07%** against prior year levels (4.75%).
+* **Segment Dominance:**
+  * **Consumer** leads profitability at **51.44%**, followed by **Corporate** at **30.21%** and **Home Office** at **18.35%**.
+* **Regional Leaders:**
+  * Top profit-generating states/regions are led by **England**, **New York**, and **California**.
+* **Product Profitability Divergence:**
+  * While Technology sub-categories (Phones, Copiers) drive substantial sales and profit margins, specific Furniture segments (such as Tables) show noticeable margin compression requiring discount reviews.
+
+---
+
+## Data Architecture & Workflow Pipeline
+
+```text
+┌─────────────────┐      ┌───────────────┐      ┌─────────────────┐      ┌─────────────────┐
+│   Source Data   │ ───► │  SQL Queries  │ ───► │   Power Query   │ ───► │ Power BI Model  │
+│  (Excel / CSV)  │      │ (Aggregation) │      │  (ETL & Types)  │      │  (DAX & Visual) │
+└─────────────────┘      └───────────────┘      └─────────────────┘      └─────────────────┘
