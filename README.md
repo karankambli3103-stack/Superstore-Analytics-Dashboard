@@ -12,7 +12,8 @@ An executive-level business intelligence dashboard built in **Power BI** to eval
 
 ## Dashboard Preview
 
-![Superstore Analytics Dashboard](dashboard_preview.png)
+<img width="1307" height="732" alt="Screenshot 2026-10-07 150027" src="https://github.com/user-attachments/assets/5e1255a6-ec4b-4a11-84dd-ecc3c102b8f4" />
+
 
 ---
 
